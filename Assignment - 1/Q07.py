@@ -8,5 +8,5 @@ if __name__ == "__main__":
 
     matched = exposure.match_histograms(image, reference, multichannel=True)
 
-    cv2.imwrite('Output/Q08/matched.png', matched)
+    cv2.imwrite('Output/Q07/matched.png', matched)
     print(f"Output image generated at Output/Q07.")
