@@ -47,19 +47,10 @@ def scaleImg(im, scale):
             orir = r * rowScale
             oric = c * colScale
             enlargedImg[r, c] = GetBilinearPixel(im, oric, orir)
-    cv.imwrite(f"Output/Q04/Lena_{scale}x_custom.png", enlargedImg)
-    print(f"{scale}x custom resized image stored at Output/Q04")
+    print(enlargedImg)
 
 
 if __name__ == "__main__":
-    im = cv.imread("Resources/Lena.png")
-    if im is None:
-        sys.exit("Could not read the image.")
-
-    scaleImg(im, 0.5)
-    scaleImg(im, 1)
+    im = np.array([[20, 20, 20], [0, 20, 0], [0, 20, 0]])
+    print(im)
     scaleImg(im, 2)
-
-    resizeInBuilt(im, 0.5)
-    resizeInBuilt(im, 1)
-    resizeInBuilt(im, 2)
